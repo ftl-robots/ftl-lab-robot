@@ -1,0 +1,23 @@
+{
+  "name": "ftl-lab-robot",
+  "version": "1.0.0",
+  "description": "Raspberry Pi powered FTL Training Robot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiquanyeo/ftl-lab-robot.git"
+  },
+  "author": "ZQ Yeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhiquanyeo/ftl-lab-robot/issues"
+  },
+  "homepage": "https://github.com/zhiquanyeo/ftl-lab-robot#readme",
+  "dependencies": {
+    "command-line-args": "^4.0.7",
+    "winston": "^2.3.1"
+  }
+}

@@ -20,9 +20,9 @@ const logger = new (winston.Logger)({
 });
 
 const optionDefs = [
-    { name: 'connection', alias: 'c', type: String, defaultOption: true },
+    { name: 'mode', alias: 'm', type: String, defaultOption: true },
     { name: 'port', alias: 'p', type: Number},
-    { name: 'robotConfig', alias: 'r', type: String}
+    { name: 'robotConfig', alias: 'c', type: String}
 ];
 
 const opts = commandLineArgs(optionDefs, { partial: true });
@@ -30,7 +30,7 @@ const opts = commandLineArgs(optionDefs, { partial: true });
 const DEFAULT_PROTOCOL = 'simple';
 const DEFAULT_ROBOT_CONFIG = 'basic';
 
-const cfgProtocol = opts.connection !== undefined ? opts.connection : DEFAULT_PROTOCOL;
+const cfgProtocol = opts.mode !== undefined ? opts.mode : DEFAULT_PROTOCOL;
 const cfgRobotConfig = opts.robotConfig !== undefined ? opts.robotConfig : DEFAULT_ROBOT_CONFIG;
 
 logger.info('=== Starting FTL Lab Robot ===');
@@ -136,7 +136,7 @@ for (var portId in robotConfiguration.portMap) {
 var inputState = {
     digital: {},
     analog: {},
-}
+};
 
 var readIntervalToken = setInterval(() => {
     // Get each port

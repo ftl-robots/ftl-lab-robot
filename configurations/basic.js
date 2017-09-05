@@ -1,12 +1,12 @@
 const { Constants } = require('ftl-robot-host');
-const RaspiI2c = require('../hardware/raspi-i2c');
+const { RaspiI2C } = require('ftl-standard-interface-hw-raspi');
 
 var config = {
     interfaces: [
         {
             id: 'i2c',
             type: Constants.InterfaceTypes.I2C,
-            implementation: new RaspiI2c(1)
+            implementation: new RaspiI2C(1)
         }
     ],
     devices: [
